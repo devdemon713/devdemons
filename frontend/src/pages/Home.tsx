@@ -19,7 +19,6 @@ const Home: React.FC = () => {
           <p className="text-2xl text-primary-100">Connecting farmers and buyers for a sustainable future</p>
         </div>
       </section>
-
       <section className="grid md:grid-cols-3 gap-8">
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
           <img 

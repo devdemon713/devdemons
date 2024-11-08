@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-
 interface User {
   id: string;
   name: string;
@@ -35,9 +34,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const token = localStorage.getItem('token');
 
     if (user && token) {
-      const userData = JSON.parse(user);
-      setCurrentUser(userData);
-      setUserRole(userData.role);
+      try {
+        const userData: User = JSON.parse(user);
+        setCurrentUser(userData);
+        setUserRole(userData.role);
+      } catch (error) {
+        console.error("Failed to parse user data:", error);
+      }
     }
     
     setLoading(false);
@@ -48,6 +51,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.removeItem('token');
     setCurrentUser(null);
     setUserRole(null);
+    setLoading(false); // Ensure loading is false after logout
   };
 
   const value = {

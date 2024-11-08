@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -19,37 +19,35 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gray-100">
-        <Header />
-        <main className="flex-grow container mx-auto px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/marketplace" element={<Marketplace />} />
-            <Route path="/contracts" element={<Contracts />} />
-            <Route 
-              path="/farmer-dashboard" 
-              element={
-                <PrivateRoute role="farmer">
-                  <FarmerDashboard />
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/buyer-dashboard" 
-              element={
-                <PrivateRoute role="buyer">
-                  <BuyerDashboard />
-                </PrivateRoute>
-              } 
-            />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 py-8">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/contracts" element={<Contracts />} />
+          <Route 
+            path="/farmer-dashboard" 
+            element={
+              <PrivateRoute role="farmer">
+                <FarmerDashboard />
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/buyer-dashboard" 
+            element={
+              <PrivateRoute role="buyer">
+                <BuyerDashboard />
+              </PrivateRoute>
+            } 
+          />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
