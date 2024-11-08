@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, ShoppingCart } from 'lucide-react';
+import { Search, ShoppingCart } from 'lucide-react';
 import axios from 'axios';
 
 interface Crop {
