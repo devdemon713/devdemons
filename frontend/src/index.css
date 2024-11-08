@@ -12,14 +12,23 @@ body {
   padding: 0 1rem;
 }
 
+/* For small screens */
 @media (min-width: 640px) {
   .container {
     padding: 0 2rem;
   }
 }
 
+/* For medium screens */
 @media (min-width: 1024px) {
   .container {
     padding: 0 4rem;
+  }
+}
+
+/* Example for customizing grid layout */
+@media (min-width: 640px) {
+  .grid-custom {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
