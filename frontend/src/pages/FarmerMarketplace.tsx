@@ -28,7 +28,7 @@ const FarmerMarketplace: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/farmer/crops', newCrop);
+      const response = await axios.post('https://backend-server-devdemons.vercel.app/api/farmer/crops', newCrop);
       setCrops([...crops, response.data]);
       setIsAddingCrop(false);
       setNewCrop({
