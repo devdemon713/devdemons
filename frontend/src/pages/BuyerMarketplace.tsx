@@ -23,7 +23,7 @@ const BuyerMarketplace: React.FC = () => {
   useEffect(() => {
     const fetchCrops = async () => {
       try {
-        const response = await axios.get('/api/crops');
+        const response = await axios.get('https://backend-server-devdemons.vercel.app/api/crops');
         setCrops(response.data);
       } catch (error) {
         console.error('Error fetching crops:', error);
