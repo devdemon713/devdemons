@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/athu');
 const farmerRoutes = require('./routes/farmer');
 const buyerRoutes = require('./routes/buyer');
 
