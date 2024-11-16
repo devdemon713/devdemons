@@ -8,6 +8,7 @@ import FarmerDashboard from './pages/FarmerDashboard';
 import BuyerDashboard from './pages/BuyerDashboard';
 import Marketplace from './pages/Marketplace';
 import Contracts from './pages/Contracts';
+import About from './pages/About'; 
 import PrivateRoute from './components/PrivateRoute';
 import { useAuth } from './contexts/AuthContext';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/contracts" element={<Contracts />} />
+          <Route path="/About" element={<About  />} />
           <Route 
             path="/farmer-dashboard" 
             element={

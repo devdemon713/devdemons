@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { LogIn } from 'lucide-react';
 
+interface LoginResponse {
+  token: string;
+  user: {
+    role: string;
+    [key: string]: any;
+  };
+}
+
 const Login: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -16,21 +24,26 @@ const Login: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('https://backend-server-devdemons.vercel.app/api/auth/login', {
-        email,
-        password
-      });
+      const response = await axios.post<LoginResponse>(
+        'https://backend-server-devdemons.vercel.app/api/auth/login',
+        { email, password }
+      );
+      
+      // Log the response to debug
+      console.log(response.data);
 
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
-
-      if (response.data.user.role === 'farmer') {
-        navigate('/farmer-dashboard');
+      
+      // Navigate based on user role
+      if (response.data.user.role === 'buyer') {
+        navigate('/');
       } else {
-        navigate('/buyer-dashboard');
+        navigate('/');
       }
-    } catch (error: any) {
-      setError(error.response?.data?.message || 'Failed to log in');
+    } catch (error) {
+      const err = error as AxiosError<{ message: string }>;
+      setError(err.response?.data?.message || 'Failed to log in');
     } finally {
       setLoading(false);
     }
