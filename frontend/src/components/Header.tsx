@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Sprout, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
@@ -7,12 +7,6 @@ const Header: React.FC = () => {
   const { currentUser, userRole, logout } = useAuth();
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // UseEffect to ensure the header updates when the currentUser or userRole changes
-  useEffect(() => {
-    // This hook ensures that the component re-renders when currentUser or userRole change
-  }, [currentUser, userRole]);
-
   const handleLogout = () => {
     logout();
     navigate('/login');
@@ -94,6 +88,7 @@ const Header: React.FC = () => {
                 <>
                   <li><Link to="/login" className="hover:text-primary-200">Login</Link></li>
                   <li><Link to="/signup" className="hover:text-primary-200">Sign Up</Link></li>
+                  <li><Link to="/About" className="hover:text-primary-200">About Us</Link></li>
                 </>
               )}
             </ul>
