@@ -46,6 +46,7 @@ const Header: React.FC = () => {
                 {userRole === 'buyer' && (
                   <li><Link to="/buyer-dashboard" className="hover:text-primary-200">Buyer Dashboard</Link></li>
                 )}
+                <li><Link to="/About" className="hover:text-primary-200">About Us</Link></li>
                 <li>
                   <button onClick={handleLogout} className="flex items-center hover:text-primary-200">
                     <LogOut size={20} className="mr-1" />
@@ -77,12 +78,14 @@ const Header: React.FC = () => {
                   {userRole === 'buyer' && (
                     <li><Link to="/buyer-dashboard" className="hover:text-primary-200">Buyer Dashboard</Link></li>
                   )}
+                  <li><Link to="/About" className="hover:text-primary-200">About Us</Link></li>
                   <li>
                     <button onClick={handleLogout} className="flex items-center hover:text-primary-200">
                       <LogOut size={20} className="mr-1" />
                       Logout
                     </button>
                   </li>
+                  
                 </>
               ) : (
                 <>
