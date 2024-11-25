@@ -67,7 +67,7 @@ const About: React.FC = () => {
          <h5>Building a stable market ecosystem.</h5>
           
           <span>
-           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+           <a href="https://www.linkedin.com/in/gaurav-patil-1729b531a/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
           </span>
         </>
       ),
