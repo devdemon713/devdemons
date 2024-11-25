@@ -10,7 +10,7 @@ const About: React.FC = () => {
          <h5> Connecting buyers and farmers seamlessly.</h5>
           
           <span>
-           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+           <a href="https://www.linkedin.com/in/siddhi-varma-70a8b5292/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
           </span>
         </>
       ),
@@ -25,7 +25,7 @@ const About: React.FC = () => {
          <h5> Ensuring fair pricing for farmers.</h5>
           
           <span>
-           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+           <a href="https://www.linkedin.com/in/parth-chikalkar-b70608290/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
           </span>
         </>
       ),
@@ -39,7 +39,7 @@ const About: React.FC = () => {
          <h5>Providing tools for resource access.</h5>
           
           <span>
-           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+           <a href="https://www.linkedin.com/in/prashant-kolhe-6a8b55200/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
           </span>
         </>
       ),
@@ -53,7 +53,7 @@ const About: React.FC = () => {
          <h5>Simplifying contract farming agreements.</h5>
           
           <span>
-           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+           <a href="https://www.linkedin.com/in/madhura-teli-aba819296/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
           </span>
         </>
       ),
@@ -81,7 +81,7 @@ const About: React.FC = () => {
          <h5>Empowering agriculture with technology.</h5>
           
           <span>
-           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+           <a href="https://www.linkedin.com/in/niranjan-mane-080883290/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
           </span>
         </>
       ),
