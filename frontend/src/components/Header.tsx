@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Sprout, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
@@ -7,6 +7,14 @@ const Header: React.FC = () => {
   const { currentUser, userRole, logout } = useAuth();
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Alert message for welcoming user
+  useEffect(() => {
+    if (currentUser) {
+      alert(`Welcome to agro connect, ${currentUser.name || 'User'}!`);
+    }
+  }, [currentUser]);
+
   const handleLogout = () => {
     logout();
     navigate('/login');

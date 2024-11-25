@@ -13,7 +13,7 @@ const About: React.FC = () => {
       link: "/",
     },
     {
-      imgSrc: "/pk.jpeg",
+      imgSrc: "/yu.jpeg",
       description: "Providing tools for resource access.",
       link: "/resources",
     },
@@ -23,12 +23,12 @@ const About: React.FC = () => {
       link: "/agreements",
     },
     {
-      imgSrc: "/gy.jpeg",
+      imgSrc: "/gpp.jpeg",
       description: "Building a stable market ecosystem.",
       link: "/ecosystem",
     },
     {
-      imgSrc: "/nir.jpeg",
+      imgSrc: "/rrr.jpeg",
       description: "Empowering agriculture with technology.",
       link: "/technology",
     },
@@ -54,7 +54,7 @@ const About: React.FC = () => {
                   <img
                     src={card.imgSrc}
                     alt={`Card ${index + 1}`}
-                    className="absolute inset-0 w-full h-full object-scale-down"
+                   className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
               </a>
