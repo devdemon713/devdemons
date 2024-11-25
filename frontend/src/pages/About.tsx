@@ -4,32 +4,87 @@ const About: React.FC = () => {
   const cards = [
     {
       imgSrc: "/sid.jpeg",
-      description: "Connecting buyers and farmers seamlessly.",
+      description: (
+        <>
+        Siddhi Varma <br />
+         <h5> Connecting buyers and farmers seamlessly.</h5>
+          
+          <span>
+           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+          </span>
+        </>
+      ),
+      
       link: "/connect",
     },
     {
       imgSrc: "/parth.jpg",
-      description: "Ensuring fair pricing for farmers.",
+      description: (
+        <>
+        Parth Chikalkar <br />
+         <h5> Ensuring fair pricing for farmers.</h5>
+          
+          <span>
+           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+          </span>
+        </>
+      ),
       link: "/",
     },
     {
       imgSrc: "/yu.jpeg",
-      description: "Providing tools for resource access.",
+      description: (
+        <>
+        Prashant Kolhe <br />
+         <h5>Providing tools for resource access.</h5>
+          
+          <span>
+           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+          </span>
+        </>
+      ),
       link: "/resources",
     },
     {
       imgSrc: "/maddy.jpeg",
-      description: "Simplifying contract farming agreements.",
+      description: (
+        <>
+        Madhura Teli <br />
+         <h5>Simplifying contract farming agreements.</h5>
+          
+          <span>
+           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+          </span>
+        </>
+      ),
       link: "/agreements",
     },
     {
       imgSrc: "/gpp.jpeg",
-      description: "Building a stable market ecosystem.",
+      description: (
+        <>
+        Gaurav Patil<br />
+         <h5>Building a stable market ecosystem.</h5>
+          
+          <span>
+           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+          </span>
+        </>
+      ),
       link: "/ecosystem",
     },
     {
       imgSrc: "/rrr.jpeg",
-      description: "Empowering agriculture with technology.",
+      description: (
+        <>
+        Niranjan Mane<br />
+         <h5>Empowering agriculture with technology.</h5>
+          
+          <span>
+           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+          </span>
+        </>
+      ),
       link: "/technology",
     },
   ];
