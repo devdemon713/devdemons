@@ -1,11 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tractor, Package, FileText, TrendingUp } from 'lucide-react';
 
 const FarmerDashboard: React.FC = () => {
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    // Fetch user data from local storage after login
+    const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
+    setUser(storedUser);
+  }, []);
+
+  if (!user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <h2>Loading user data...</h2>
+      </div>
+    );
+  }
+
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 p-6">
       <h1 className="text-3xl font-bold text-green-800">Farmer Dashboard</h1>
-      
+
+   
+         {/* User Info Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
+            {/* Name and Role */}
+            <div className="flex space-x-4">
+              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
+                <h2 className="text-xl font-semibold mb-2">Name</h2>
+                <p className="text-2xl">{user.name}</p>
+              </div>
+              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
+                <h2 className="text-xl font-semibold mb-2">Role</h2>
+                <p className="text-2xl">{user.role}</p>
+              </div>
+            </div>
+            {/* Email and Location */}
+            <div className="flex space-x-4">
+              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
+                <h2 className="text-xl font-semibold mb-2">Email</h2>
+                <p className="text-2xl">{user.email}</p>
+              </div>
+              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
+                <h2 className="text-xl font-semibold mb-2">Location</h2>
+                <p className="text-2xl">{user.location}</p>
+              </div>
+            </div>
+          </div>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-white p-6 rounded-lg shadow-md">
           <Tractor className="text-green-600 mb-2" size={32} />
@@ -45,39 +88,6 @@ const FarmerDashboard: React.FC = () => {
             <span className="text-sm text-gray-500">3 days ago</span>
           </li>
         </ul>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold mb-4">My Listings</h2>
-          <ul className="space-y-2">
-            <li className="flex items-center justify-between">
-              <span>Organic Tomatoes</span>
-              <span className="text-green-600 font-semibold">500 kg available</span>
-            </li>
-            <li className="flex items-center justify-between">
-              <span>Sweet Corn</span>
-              <span className="text-green-600 font-semibold">1000 kg available</span>
-            </li>
-            <li className="flex items-center justify-between">
-              <span>Fresh Lettuce</span>
-              <span className="text-green-600 font-semibold">200 kg available</span>
-            </li>
-          </ul>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold mb-4">Upcoming Deliveries</h2>
-          <ul className="space-y-2">
-            <li className="flex items-center justify-between">
-              <span>Contract #1235 - Organic Tomatoes</span>
-              <span className="text-gray-600">Due in 3 days</span>
-            </li>
-            <li className="flex items-center justify-between">
-              <span>Contract #1236 - Sweet Corn</span>
-              <span className="text-gray-600">Due in 1 week</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   );
