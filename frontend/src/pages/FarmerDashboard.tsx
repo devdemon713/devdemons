@@ -22,33 +22,31 @@ const FarmerDashboard: React.FC = () => {
     <div className="space-y-8 p-6">
       <h1 className="text-3xl font-bold text-green-800">Farmer Dashboard</h1>
 
-   
-         {/* User Info Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
-            {/* Name and Role */}
-            <div className="flex space-x-4">
-              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
-                <h2 className="text-xl font-semibold mb-2">Name</h2>
-                <p className="text-2xl">{user.name}</p>
-              </div>
-              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
-                <h2 className="text-xl font-semibold mb-2">Role</h2>
-                <p className="text-2xl">{user.role}</p>
-              </div>
-            </div>
-            {/* Email and Location */}
-            <div className="flex space-x-4">
-              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
-                <h2 className="text-xl font-semibold mb-2">Email</h2>
-                <p className="text-2xl">{user.email}</p>
-              </div>
-              <div className="bg-green-500 text-white p-6 rounded-lg shadow-md flex-1">
-                <h2 className="text-xl font-semibold mb-2">Location</h2>
-                <p className="text-2xl">{user.location}</p>
-              </div>
-            </div>
-          </div>
+      {/* User Info Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {/* Name */}
+        <div className="bg-green-500 text-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-2">Name</h2>
+          <p className="text-2xl">{user.name}</p>
+        </div>
+        {/* Role */}
+        <div className="bg-green-500 text-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-2">Role</h2>
+          <p className="text-2xl">{user.role}</p>
+        </div>
+        {/* Email */}
+        <div className="bg-green-500 text-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-2">Email</h2>
+          <p className="text-2xl">{user.email}</p>
+        </div>
+        {/* Location */}
+        <div className="bg-green-500 text-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-2">Location</h2>
+          <p className="text-2xl">{user.location}</p>
+        </div>
+      </div>
 
+      {/* Metrics Section */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-white p-6 rounded-lg shadow-md">
           <Tractor className="text-green-600 mb-2" size={32} />
@@ -72,6 +70,7 @@ const FarmerDashboard: React.FC = () => {
         </div>
       </div>
 
+      {/* Recent Activity Section */}
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4">Recent Activity</h2>
         <ul className="space-y-4">
