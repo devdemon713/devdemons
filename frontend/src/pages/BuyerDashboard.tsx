@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingCart, FileText, TrendingUp, Package, ClipboardList } from 'lucide-react';
+import { ShoppingCart, FileText, TrendingUp, Package} from 'lucide-react';
 
 const BuyerDashboard: React.FC = () => {
   const user = JSON.parse(localStorage.getItem('user') || '{}'); // Get logged in user's data
