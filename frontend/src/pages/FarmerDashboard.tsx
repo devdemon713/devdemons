@@ -2,11 +2,31 @@ import React from 'react';
 import { Tractor, Package, FileText, TrendingUp } from 'lucide-react';
 
 const FarmerDashboard: React.FC = () => {
+  // Retrieve user information from localStorage and handle missing data
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+  const { name = 'N/A', role = 'N/A', email = 'N/A', location = 'N/A' } = user;
+
   return (
     <div className="space-y-8">
       <h1 className="text-3xl font-bold text-green-800">Farmer Dashboard</h1>
-      
+
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Name:</h2>
+          <p className="text-gray-700 font-semibold">{name}</p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Role:</h2>
+          <p className="text-gray-700 font-semibold">{role}</p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Email:</h2>
+          <p className="break-words text-gray-700 font-semibold">{email}</p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Location:</h2>
+          <p className="text-gray-700 font-semibold">{location}</p>
+        </div>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <Tractor className="text-green-600 mb-2" size={32} />
           <h2 className="text-xl font-semibold mb-2">My Farms</h2>
