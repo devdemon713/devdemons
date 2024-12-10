@@ -18,20 +18,6 @@ const About: React.FC = () => {
       link: "/connect",
     },
     {
-      imgSrc: "/parth.jpg",
-      description: (
-        <>
-        Parth Chikalkar <br />
-         <h5> Ensuring fair pricing for farmers.</h5>
-          
-          <span>
-           <a href="https://www.linkedin.com/in/parth-chikalkar-b70608290/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
-          </span>
-        </>
-      ),
-      link: "/",
-    },
-    {
       imgSrc: "/yu.jpeg",
       description: (
         <>
@@ -45,6 +31,21 @@ const About: React.FC = () => {
       ),
       link: "/resources",
     },
+    {
+      imgSrc: "/parth.jpg",
+      description: (
+        <>
+        Parth Chikalkar <br />
+         <h5> Ensuring fair pricing for farmers.</h5>
+          
+          <span>
+           <a href="https://www.linkedin.com/in/parth-chikalkar-b70608290/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>.
+          </span>
+        </>
+      ),
+      link: "/",
+    },
+  
     {
       imgSrc: "/maddy.jpeg",
       description: (
